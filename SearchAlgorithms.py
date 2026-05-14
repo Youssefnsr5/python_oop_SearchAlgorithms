@@ -218,7 +218,7 @@ def path_h_cost(path): # f(n) = h(n)
     last_node = path[-1][0]
     h_cost = H_table[last_node]
     f_cost = h_cost
-    return f_cost, last_node 
+    return f_cost, last_node # returning the last node in the path, because we want to sort the queue based on the h-cost of the last node in the path, which is the current node we are exploring, and we want to check if it is the goal node or not
 
 def gbfs(graph, start, goal):
     visited = []
